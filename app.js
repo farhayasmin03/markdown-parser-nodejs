@@ -7,8 +7,10 @@ app.set('view engine', 'ejs');
 // public folder to store assets
 app.use(express.static(__dirname + '/public'));
 
-
-
+// routes for app
+app.get('/', function(req, res) {
+  res.render('index');
+});
 
 // listen on port 8000 (for localhost) or the port defined for heroku
 app.listen(3000, function () {
